@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#800000">
+
+    <View
+        android:id="@+id/golden_line"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:background="#FFD700"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Приятного аппетита!"
+            android:textSize="22sp"
+            android:textColor="@color/darkRed"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"/>
+
+        <EditText
+            android:id="@+id/editText"
+            style="@style/CustomEditText"
+            android:hint="Вы хотите бутерброд?"
+            android:layout_below="@id/textView"
+            android:layout_margin="20dp"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/button_cucumber"
+            style="@style/CustomButton"
+            android:text="Добавить огурец"
+            android:layout_below="@id/editText"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/button_tomato"
+            style="@style/CustomButton"
+            android:text="Добавить помидор"
+            android:layout_below="@id/button_cucumber"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/button_tomato"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Не забудьте взять соус."
+                android:textColor="@color/darkRed"
+                android:textSize="18sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/plate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yellow_plate"
+                android:contentDescription="Plate Image"
+                android:adjustViewBounds="true"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/textView_sandwich"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Место для\n\n\n\nбутерброда"
+                android:textSize="20sp"
+                android:textColor="#800000"
+                android:gravity="center"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/imageView_sandwich"
+                android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/butterbread"
+            android:contentDescription="Butterbread Image"
+            android:layout_below="@id/textView_sandwich"
+            android:scaleType="centerInside"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
